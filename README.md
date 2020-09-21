@@ -31,3 +31,28 @@ A key is added in the case that the output is saved as a PNG, but because this i
 About half of the code is just about getting and playing with the price data for cryptocurrencies. The source of this data is the CoinMarketCap (CMC) API, but getting historical data from the API requires a paid-tier amount of acess. Thus, the batch and the bit of VBScript are all about creating a scheduled command (the windows equivalent of cronjob) to run the python script periodically to update datasets and re-compute the visualization. 
 
 The storage of the data is intended to be human-readible. Thus, the pandas dataframe with the time series data writes to and reads from excel directly, using the cryptocurrency name itself, instead of the cmc id which is what the visualziation uses, and the names and ids dictionary is saved as a json prettily instead of pickled. This way you can see the data, and also its visualization. 
+
+# Gallery
+
+## High Frequency
+
+Data collected every 1 minute for 2 hours
+![Example One](/data/notable_examples/example_viz.svg)
+
+## Low Frequency 
+Data collected once an hour for various time intervals
+
+![Example Two](/data/notable_examples/example_viz_2.svg)
+
+##
+
+![Example Three](/data/notable_examples/example_viz_3.svg)
+
+##
+
+![Example Four](/data/notable_examples/example_viz_4.svg)
+
+##
+
+This one illustrates the key, which is a useful feature when one has a better idea of the structure of the data and wants to be more precise about specific cryptocurrencies
+![Example Five](/data/notable_examples/example_viz_5.png)
