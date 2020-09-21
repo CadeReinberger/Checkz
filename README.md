@@ -23,3 +23,11 @@ and whistles. In particualar.
    spearman correlation
    
 Roughly speaking, this is just kind of a bunch of information put together in a way that's hopefully a bit intuitive. As such, the idea is to help one be able to see somewhat subtler trends in the data. 
+
+A key is added in the case that the output is saved as a PNG, but because this image is quite large, an SVG is superior for seeing the data. The SVG image is without key, however. 
+
+# Gathering and Storing Time-Series Data for Cryptocurrency Prices
+
+About half of the code is just about getting and playing with the price data for cryptocurrencies. The source of this data is the CoinMarketCap (CMC) API, but getting historical data from the API requires a paid-tier amount of acess. Thus, the batch and the bit of VBScript are all about creating a scheduled command (the windows equivalent of cronjob) to run the python script periodically to update datasets and re-compute the visualization. 
+
+The storage of the data is intended to be human-readible. Thus, the pandas dataframe with the time series data writes to and reads from excel directly, using the cryptocurrency name itself, instead of the cmc id which is what the visualziation uses, and the names and ids dictionary is saved as a json prettily instead of pickled. This way you can see the data, and also its visualization. 
