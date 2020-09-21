@@ -1,0 +1,1 @@
+cmc_api_key = 'YOUR_COINMARKETCAP_API_KEY'

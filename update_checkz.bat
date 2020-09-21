@@ -1,0 +1,1 @@
+"C:\Users\willi\anaconda3\python.exe" "C:\Users\willi\OneDrive\Documents\python_scripts\checkz\analyzer.py"
